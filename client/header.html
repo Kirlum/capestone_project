@@ -1,0 +1,22 @@
+<template name="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Scanner Database</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="guide">Guidelines</a>
+          </li>
+          <li>
+            <a href="input_pat">Data input</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons align="right"}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

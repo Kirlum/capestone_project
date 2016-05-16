@@ -1,0 +1,137 @@
+<template name="input_pat">
+    <div class="container navbar">
+        <h1> Data Input</h1>
+        <div class="nav navbar-left">
+          {{> search_form}}
+        </div>
+        <div class="nav navbar-right">
+          {{> scan_form}}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              {{> inputFormPat}}
+          </div>
+          <div class="col-md-4">
+              {{> dataList}}
+          </div>
+        </div>
+    </div>
+</template>
+
+<template name="input_scan">
+    <div class="container">
+        <h1> Scan Input</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              {{> inputFormScan}}
+          </div>
+          <div class="col-md-4">
+              {{> dataList}}
+          </div>
+        </div>
+    </div>
+</template>
+
+<template name="search_form">
+  <div id="search_form" class="patient-search-form">
+    <form class="js-search-form">
+      <div class="form-group">
+        <h4>search Patient:</h4>
+        <input type="text" id="search" placeholder="Search">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<template name="scan_form">
+  <div>
+      <a class="btn btn-success btn-lg" href="input_scan">Scan input</a>
+  </div>
+</template>
+
+
+<template name="inputFormPat">
+  <div class="formStyle">
+    <div class="container">
+      {{> input_form_pat}}
+    </div>
+  </div>
+</template>
+
+<template name="inputFormScan">
+  <div class="formStyle">
+    <div class="container">
+      {{> input_form_scan}}
+    </div>
+  </div>
+</template>
+
+<template name="dataList">
+  <div class="formStyle">
+    <div class="container">
+      {{> data_list}}
+    </div>
+  </div>
+</template>
+
+<template name="input_form_pat">
+	<div id="input_form" class="patient-input-form">
+		<form class="js-save-input-form">
+      <h2>new patient</h2>
+		  <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" id="name" placeholder="Müller">
+		  </div>
+      <div class="form-group">
+        <label for="first">first name</label>
+        <input type="text" class="form-control" id="first" placeholder="Max">
+      </div>
+		  <div class="form-group">
+		    <label for="birth">Birthday</label>
+		    <input type="text" class="form-control" id="birth" placeholder="01.01.2000">
+		  </div>
+		    <div class="form-group">
+		    <label for="headshape">Headshape</label>
+		    <input type="text" class="form-control" id="headshape"
+        placeholder="Plagiocephalus/Brachycephalus/Brachyplagiocephalus">
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</template>
+
+<template name="input_form_scan">
+	<div id="input_form" class="patient-input-form">
+		<form class="js-save-scan-form">
+      <h2>new scan</h2>
+		  <div class="form-group">
+		    <label for="date">Datum</label>
+		    <input type="text" class="form-control" id="name" placeholder="01.01.2016">
+		  </div>
+      <div class="form-group">
+        <label for="CI">cephalic ration</label>
+        <input type="text" class="form-control" id="first" placeholder="">
+      </div>
+		  <div class="form-group">
+		    <label for="DD">Difference of the diagonals</label>
+		    <input type="text" class="form-control" id="birth" placeholder="">
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</template>
+
+
+<template name="data_list" class="data_list">
+        <h2>recent patient</h2>
+  <ul>
+    <li>  <div>Name: {{recent_Pat.name}}</div> </li>
+    <li>  <div>First name:	{{recent_Pat.first}} </div> </li>
+    <li>  <div>Birthday: {{recent_Pat.birth}} </div> </li>
+  </ul>
+</template>

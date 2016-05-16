@@ -1,0 +1,15 @@
+.formStyle {
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 0px;
+  background-color: lightgrey;
+  padding-bottom: 10px;
+}
+
+.form-control {
+  width: 60%;
+}
+
+h3 {
+  font-style: italic;
+}
